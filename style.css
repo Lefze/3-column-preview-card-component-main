@@ -1,0 +1,103 @@
+/* font-family: 'Big Shoulders Display', sans-serif;
+font-family: 'Lexend Deca', sans-serif;*/
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  height: 100svh;
+  display: flex;
+  align-items: center;
+  background-color: hsl(0, 0%, 95%);
+  font-family: "Lexend Deca", sans-serif;
+}
+
+/* Hack to remedy height going past browser UI with the other breakpoint kicking in, can't figure out the cause :^) */
+
+@media only screen and (max-width: 1000px) {
+  body {
+    height: 100%;
+  }
+}
+
+.wrap {
+  max-width: 1440px;
+  margin: 0 auto;
+}
+
+.centerbox {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  border-radius: 10px;
+  margin: 10%;
+  overflow: hidden;
+  box-shadow: 0px 0px 20px 5px rgba(0, 0, 0, 0.2);
+}
+
+/* mobil */
+@media only screen and (max-width: 1000px) {
+  .centerbox {
+    grid-template-columns: 1fr;
+    margin: 10% 2%;
+  }
+}
+
+.boxleft {
+  background-color: hsl(31, 77%, 52%);
+  padding: 15%;
+}
+
+.boxleft a {
+  color: hsl(31, 77%, 52%);
+}
+
+.boxmid {
+  background-color: hsl(184, 100%, 22%);
+  padding: 15%;
+}
+
+.boxmid a {
+  color: hsl(184, 100%, 22%);
+}
+
+.boxright {
+  background-color: hsl(179, 100%, 13%);
+  padding: 15%;
+}
+
+.boxright a {
+  color: hsl(179, 100%, 13%);
+}
+
+p {
+  color: hsla(0, 0%, 100%, 0.75);
+  font-size: 15px;
+  line-height: 1.7rem;
+}
+
+h1 {
+  text-transform: uppercase;
+  color: hsl(0, 0%, 95%);
+  font-family: "Big Shoulders Display", sans-serif;
+  padding: 10px 0px;
+  font-size: 40px;
+}
+
+a {
+  display: inline-flex;
+  border: 2px solid hsl(0, 0%, 95%);
+  border-radius: 100px;
+  background-color: hsl(0, 0%, 95%);
+  padding: 15px 30px;
+  margin-top: 100px;
+  margin-bottom: 15px;
+  text-decoration: none;
+  transition: 0.2s;
+}
+
+a:hover {
+  color: hsla(0, 0%, 100%, 0.75);
+  background-color: rgba(0, 0, 0, 0);
+  transition: 0.3s;
+}
